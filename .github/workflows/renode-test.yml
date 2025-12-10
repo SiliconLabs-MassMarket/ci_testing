@@ -23,6 +23,10 @@ jobs:
         tar -xzf renode-1.15.3.linux-portable.tar.gz
         echo "$PWD/renode_1.15.3_portable" >> $GITHUB_PATH
     
+    - name: Install Python dependencies for Renode tests
+      run: |
+        pip install -r renode_1.15.3_portable/tests/requirements.txt
+    
     - name: Verify Renode installation
       run: |
         renode --version

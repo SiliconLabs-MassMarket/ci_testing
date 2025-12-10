@@ -38,7 +38,7 @@ jobs:
     
     - name: Run Renode robot tests
       run: |
-        export RENODEKEYWORDS=$PWD/renode_1.15.3_portable/tests/renode-keywords.robot
+        export RENODEKEYWORDS=${PWD}/renode_1.15.3_portable/tests/renode-keywords.robot
         renode-test tests/*.robot
       continue-on-error: false
     

@@ -1,6 +1,7 @@
 *** Settings ***
 Resource          ${RENODEKEYWORDS}
 Library           RenodeKeywords
+Library           RenodeLibrary
 Library           Process
 Library           OperatingSystem
 Suite Setup       Setup

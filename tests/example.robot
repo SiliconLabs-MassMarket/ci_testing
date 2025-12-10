@@ -1,4 +1,5 @@
 *** Settings ***
+Library           RenodeKeywords
 Library           Process
 Library           OperatingSystem
 Suite Setup       Setup

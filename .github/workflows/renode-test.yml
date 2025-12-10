@@ -50,3 +50,5 @@ jobs:
           tests/robot_output.xml
           tests/log.html
           tests/report.html
+        if-no-files-found: ignore
+        retention-days: 7

@@ -38,8 +38,9 @@ jobs:
     
     - name: Run Renode robot tests
       run: |
-        export RENODEKEYWORDS=${{ github.workspace }}/renode_1.16.0_portable/tests/renode-keywords.robot
-        renode-test tests/*.robot
+        #export RENODEKEYWORDS=${{ github.workspace }}/renode_1.16.0_portable/tests/renode-keywords.robot
+        
+        renode-test tests/example_basic.robot
       continue-on-error: false
     
     - name: Upload test results

@@ -21,7 +21,7 @@ jobs:
       run: |
         wget https://github.com/renode/renode/releases/download/v1.15.3/renode-1.15.3.linux-portable.tar.gz
         tar -xzf renode-1.15.3.linux-portable.tar.gz
-        echo "$PWD/renode_1.15.3_portable" >> $GITHUB_PATH
+        echo "${{ github.workspace }}/renode_1.15.3_portable" >> $GITHUB_PATH
     
     - name: Install Python dependencies for Renode tests
       run: |
@@ -38,7 +38,7 @@ jobs:
     
     - name: Run Renode robot tests
       run: |
-        export RENODEKEYWORDS=${PWD}/renode_1.15.3_portable/tests/renode-keywords.robot
+        export RENODEKEYWORDS=${{ github.workspace }}/renode_1.15.3_portable/tests/renode-keywords.robot
         renode-test tests/*.robot
       continue-on-error: false
     

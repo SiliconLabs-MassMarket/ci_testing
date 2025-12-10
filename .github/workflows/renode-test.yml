@@ -15,7 +15,7 @@ jobs:
     - name: Install Renode dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y mono-complete gtk-sharp2 screen uml-utilities
+        sudo apt-get install -y mono-complete screen uml-utilities
     
     - name: Download and install Renode
       run: |

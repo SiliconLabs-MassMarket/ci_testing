@@ -1,0 +1,25 @@
+# Example Renode test script
+# Load a platform and run basic tests
+
+# Create a machine
+mach create "stm32f4"
+
+# Load the platform description
+machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
+
+# Load the binary
+sysbus LoadELF @build/firmware.elf
+
+# Set up logging
+logLevel 3
+
+# Start emulation
+start
+
+# Wait for a specific output or timeout
+$timeout = 10000
+$output = ""
+$startTime = [DateTime]::Now
+
+# Pause after execution
+pause

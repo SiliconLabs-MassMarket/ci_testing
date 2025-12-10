@@ -1,4 +1,5 @@
 *** Settings ***
+Resource          ${RENODEKEYWORDS}
 Library           RenodeKeywords
 Library           Process
 Library           OperatingSystem
